@@ -159,7 +159,7 @@ class LevelScreen():
                 screen.blit(trash,(45,80+((i-1)*105)))
 
     def generate_trash(self):
-        self.trashes.extend(random.sample(set(self.trash)-set(self.trashes),6-len(self.trashes)))
+        self.trashes.extend(random.sample(list(set(self.trash)-set(self.trashes)),6-len(self.trashes)))
 
     def take_heart(self):
         self.monster.add_tentacle()
